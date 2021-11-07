@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Basic from './component';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           Learn React
         </a>
         <h1> this is manikanta, lets gets started</h1>
-      </header>
+        <Basic/>      </header>
     </div>
   );
 }
