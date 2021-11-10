@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import React from 'react'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import './App.css';
-import Basic from './component';
+import Header from './Containers/header'
+import ProductDetails from './Containers/productDetails';
+import ProductListing from './Containers/productListing';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <h1> this is manikanta, lets gets started</h1>
-        <Basic/>      </header>
+<Router>
+<React.Fragment>
+<Header/>
+<Routes>
+<Route exact path="/" element={<ProductListing/>}/>
+<Route exact path="/product/:productId" element={<ProductDetails/>}/>
+
+<Route>404 Not Found</Route>
+
+</Routes>
+</React.Fragment>
+  </Router>
     </div>
   );
 }
