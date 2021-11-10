@@ -1,12 +1,14 @@
+import React from 'react'
 
 import './App.css';
-import Basic from './component';
+
 
 function App() {
   return (
     <div className="App">
-        <h1> this is manikanta, lets gets started</h1>
-        <Basic/>  
+
+   <h1>this is home</h1> 
+  
     </div>
   );
 }
